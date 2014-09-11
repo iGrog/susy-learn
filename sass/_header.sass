@@ -1,0 +1,19 @@
+header
+    background-color: $cleanBackground
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2)
+    min-height: $headerHeight
+
+    .logo
+        height: $headerHeight
+        +span(2 of 12)
+
+        > span
+            display: inline-block
+            vertical-align: middle
+            height: 100%
+            width: auto
+        > img
+            vertical-align: middle
+
+    @import "_menu"
+

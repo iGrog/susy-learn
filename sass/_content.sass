@@ -1,0 +1,36 @@
+
+
+.content
+
+    padding: 30px 0
+    h2
+        font-size: 20px
+        font-weight: 500
+        line-height: 34px
+        color: #505050
+
+    .intro
+        +full
+
+    +clearfix
+
+
+    img
+        max-width: 100%
+
+    .columns-8-4
+        +clearfix
+
+        div:first-child
+            +span(8 of 12)
+
+        div:last-child
+            +span(4 of 12 last)
+
+
+    .columns-6-6
+        div:first-child
+            +span(6 of 12)
+
+        div:last-child
+            +span(6 of 12 last)

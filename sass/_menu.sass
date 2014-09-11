@@ -1,0 +1,93 @@
+nav
+    color: black
+    +span(10 of 12 last)
+
+    > ul
+        float: right
+        > li
+            display: inline-block
+            height: $headerHeight
+            position: relative
+            float: left
+
+            > a
+                display: table-cell
+                vertical-align: middle
+                padding-left: 15px
+                padding-right: 15px
+                height: $headerHeight
+                text-decoration: none
+                color: $menuColor
+                background-color: $cleanBackground
+                border-bottom: 3px transparent solid
+
+            &:hover > a, &.active > a
+                background-color: $grayBackground
+                color: $menuColor
+                border-bottom: 3px $themeColor solid
+
+            &:hover > ul
+                opacity: 1
+                visibility: visible
+                margin: 0
+
+            &.active > a:after
+                background-color: $themeColor
+                bottom: 0px
+                content: ""
+                display: block
+                width: 5px
+                height: 5px
+                left: 50%
+                margin: 0 0 0 -2.5px
+                position: absolute
+                transform: rotate(45deg)
+
+            ul
+                z-index: 888
+                min-width: 150px
+                width: 100%
+                visibility: hidden
+                position: absolute
+                margin: 20px 0 0
+                opacity: 0
+                +transition(all, 0.3s, ease-in-out)
+
+                > li
+                    a
+                        display: block
+                        padding: 8px 10px
+                        background-color: $cleanBackground
+                        border-left: 3px transparent solid
+
+                    float: none
+                    position: relative
+                    border-top: 1px #eee solid
+                    border-bottom: 1px #eee solid
+
+                    &:hover > a
+                        background-color: $grayBackground
+                        border-left: 3px $themeColor solid
+
+                    &:hover > ul
+                        opacity: 1
+                        visibility: visible
+                        margin : 0
+
+                    ul
+                        top: -1px
+                        left: 100%
+                        margin: 0 0 0 20px
+                        visibility: hidden
+                        position: absolute
+                        opacity: 0
+
+
+
+a
+    text-decoration: none
+    color: $menuColor
+    &:hover
+        text-decoration: none
+        color: $menuColor
+

@@ -1,0 +1,33 @@
+.heading
+    +clearfix
+    background-color: #f9f9f9
+    color: #999
+    min-height: $headingHeight
+
+    .title
+        +span(6 of 12)
+        h1
+            font-size: 20px
+            line-height: $headingHeight
+            color: #505050
+
+    .breadcrumbs
+        +span (6 of 12 last)
+        text-align: right
+        line-height: $headingHeight
+
+        a
+            color: #999
+            text-decoration: none
+        a:hover
+            color: #333333
+
+        ul
+            display: inline-block
+
+            li
+                display: inline
+            li:after
+                content: ' > '
+            li:last-child:after
+                content: ''

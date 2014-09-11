@@ -1,0 +1,48 @@
+@import "normalize"
+@import "compass/reset"
+@import "susy"
+@import "breakpoint"
+@import "compass"
+@import "compass/utilities/general/clearfix"
+@import "compass/layout/sticky-footer"
+@import "compass/utilities/general/clearfix"
+
+$cleanBackground: white
+$themeColor: #EC5D9D
+$headerHeight: 86px
+$headingHeight: 86px
+$mainMargin: 15px
+$mainWidth: 1280px
+$menuColor: #888888
+$cleanBackground : white
+$grayBackground: #F9F9F9
+$a : 50px
+$grayBorder : darken($grayBackground, 10%)
+
+$susy: (global-box-sizing: border-box, columns: 12, use-custom: (rem: true, clearfix: false), debug: (image: show, color: blue, output: overlay, toggle: top right))
++border-box-sizing
+
+
+body
+    background-image: url(../images/bg.jpg)
+    font-size: 15px
+    line-height: 25px
+    color: #888
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.container
+    +container($mainWidth)
+    background-color: #ffffff
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+
+@import "_header"
+@import "_heading"
+
+@import "_content"
+@import "_footer"
+
+
+
+
+
+
