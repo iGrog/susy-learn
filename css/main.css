@@ -1,5 +1,7 @@
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700");
+@import url("http://fonts.googleapis.com/css?family=Raleway:800");
 /* line 9, ../../../xampp/Ruby/lib/ruby/gems/2.0.0/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
 article,
 aside,
@@ -338,7 +340,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
-/* line 26, ../sass/main.sass */
+/* line 28, ../sass/main.sass */
 body {
   background-image: url(../images/bg.jpg);
   font-size: 15px;
@@ -347,7 +349,7 @@ body {
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 33, ../sass/main.sass */
+/* line 35, ../sass/main.sass */
 .container {
   max-width: 1280px;
   margin-left: auto;
