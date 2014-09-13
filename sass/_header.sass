@@ -3,9 +3,12 @@ header
     box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2)
     min-height: $headerHeight
 
+    // There isn't a need to use Susy here, just a plain float: left would
+    // have done the job well enough
     .logo
         height: $headerHeight
-        +span(2 of 12)
+        // +span(2 of 12)
+        float: left
 
         > span
             display: inline-block
@@ -15,5 +18,7 @@ header
         > img
             vertical-align: middle
 
+    // I personally prefer to keep all my imports in the main Sass file.
+    // That way, I know where everything is within a glance
     @import "_menu"
 

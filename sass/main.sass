@@ -19,6 +19,7 @@ $grayBackground: #F9F9F9
 $a : 50px
 $grayBorder : darken($grayBackground, 10%)
 
+// Recommended to include fonts as <link> tags or javacsript instead of using @import.
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700")
 @import url("http://fonts.googleapis.com/css?family=Raleway:800")
 
@@ -32,10 +33,41 @@ body
     color: #888
     font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
 
+// Here's to solve your "Padding Question"
+// Since each section of your page might have a background color,
+// and you want the "padding", you should ideally use another div
+// to give the padding.
+//
+// Here's how the DOM might look like
+// .container
+//   |- header
+//      |- .inner-wrapper
+//           |- contents of header
+//
+// Refer to the HTML to see where they are located
+//
+// Susy's container is best declared on the .inner-wrapper container,
+// and you can safely give paddings to each .inner-wrapper to create
+// whitespace on the left and right.
+//
+// Therefore, your containers should be like this:
+//
 .container
-    +container($mainWidth)
+    max-width: $mainWidth
+    margin-left: auto
+    margin-right: auto
     background-color: #ffffff
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
+
+.inner-wrap
+    +container
+    padding: 0 30px
+
+// This is what you originally had
+// .container
+//     +container($mainWidth)
+//     background-color: #ffffff
+//     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2)
 
 @import "_header"
 @import "_heading"
@@ -43,8 +75,14 @@ body
 @import "_content"
 @import "_footer"
 
-
-
-
+// Here's the answer to your slider
+// Images are display: inline-block by default.
+// All items displayed with inline-block have a tiny whitespace
+// of about 2-3 pixels around it. Weird, but its just like this.
+// Fix it by changing the image's display to block.
+//
+.slider
+    img
+        display: block
 
 

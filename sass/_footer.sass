@@ -1,18 +1,28 @@
 footer
 
-    .wrap
-        padding: 30px 0px
+    .inner-wrap
+        padding-top: 30px
+        padding-bottom: 30px
 
         background-color: #4c4c4c
         color: #c8c8c8
         +clearfix
 
-    +container($mainWidth)
+    // In most layouts, container is only used once, unless you specifically
+    // want to have to different grids with Susy, which is rare.
+    // There is no need to redeclare the container again
+    // +container($mainWidth)
+
+    // Alternatively, you can use the gallery mixin for .widget
+    // .widget
+    //   +gallery(3)
 
     .widget
-        +span(3 of 12)
+        // +span(3 of 12)
+        +span(3)
         &:last-child
-            +span(3 of 12 last)
+            // +span(3 of 12 last)
+            +span(3 last)
 
         h3
             font-size: 20px

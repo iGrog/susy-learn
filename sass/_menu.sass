@@ -1,6 +1,8 @@
 nav
     color: black
-    +span(10 of 12 last)
+    // Likewise, no need for Susy
+    // +span(10 of 12 last)
+    float: right
 
     > ul
         float: right
@@ -43,6 +45,14 @@ nav
                 position: absolute
                 transform: rotate(45deg)
 
+
+            // Here's your answer to the question why text goes into the second line:
+            // You can see here that width given to the subnavigation is 150px, when
+            // more text are given and that combined with of the text exceeds 150px,
+            // text drops onto the second line.
+            //
+            // Unfortuntately, its quite likely that you have to constrain the width
+            // of this area, otherwise dropdowns can look super ugly
             ul
                 z-index: 888
                 min-width: 150px
@@ -51,7 +61,7 @@ nav
                 position: absolute
                 margin: 20px 0 0
                 opacity: 0
-                +transition(all, 0.3s, ease-in-out)
+                // +transition(all, 0.3s, ease-in-out)
 
                 > li
                     a
