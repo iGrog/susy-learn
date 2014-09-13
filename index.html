@@ -8,35 +8,37 @@
 </head>
 <body>
 
-<div class="container" id="container">
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg"/>
+    <div class="container" id="container">
+        <header>
+            <div class="inner-wrap">
+             <div class="logo">
+                <img src="images/logo.jpg"/>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="active"><a href="#">Products</a>
+                        <ul>
+                            <li><a href="#">Product Group 1</a></li>
+                            <li><a href="#">Product Group 2</a>
+                                <ul>
+                                    <li><a href="#">Product Name 1</a></li>
+                                    <li><a href="#">Product Name 2</a></li>
+                                    <li><a href="#">Product Name 3</a></li>
+                                    <li><a href="#">Product Name 4 large name</a></li>
+                                    <li><a href="#">Product Name 5</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Product Group 3 large name</a></li>
+                            <li><a href="#">Product Group 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li class="active"><a href="#">Products</a>
-                    <ul>
-                        <li><a href="#">Product Group 1</a></li>
-                        <li><a href="#">Product Group 2</a>
-                            <ul>
-                                <li><a href="#">Product Name 1</a></li>
-                                <li><a href="#">Product Name 2</a></li>
-                                <li><a href="#">Product Name 3</a></li>
-                                <li><a href="#">Product Name 4 large name</a></li>
-                                <li><a href="#">Product Name 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Product Group 3 large name</a></li>
-                        <li><a href="#">Product Group 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </nav>
     </header>
 
     <div id="slider" class="slider">
@@ -44,77 +46,93 @@
     </div>
 
     <div class="heading">
-        <div class="title"><h1>Hello world! This is title!</h1></div>
-        <div class="breadcrumbs">
-            You are here:
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Product group</a></li>
-                <li>Product name</li>
-            </ul>
+        <div class="inner-wrap">
+            <div class="title"><h1>Hello world! This is title!</h1></div>
+            <div class="breadcrumbs">
+                You are here:
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Product group</a></li>
+                    <li>Product name</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="content" id="content">
-        <div class="col12">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at consequatur, dignissimos, dolor et incidunt iure magni modi nulla omnis pariatur quaerat quasi rerum similique sunt vel voluptas, voluptate voluptates.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at consequatur, dignissimos, dolor et incidunt iure magni modi nulla omnis pariatur quaerat quasi rerum similique sunt vel voluptas, voluptate voluptates.</p>
-        </div>
-        <div class="columns-8-4">
+        <div class="inner-wrap">
+            <!-- Not recommended to use classes like col12. If its full width, you don't even need a class -->
+            <!-- <div class="col12"> -->
             <div>
-                <h2>Subheader</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at consequatur, dignissimos, dolor et incidunt iure magni modi nulla omnis pariatur quaerat quasi rerum similique sunt vel voluptas, voluptate voluptates.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at consequatur, dignissimos, dolor et incidunt iure magni modi nulla omnis pariatur quaerat quasi rerum similique sunt vel voluptas, voluptate voluptates.</p>
+            </div>
+            <!-- This is great, did you read my latest article on Smarter Sass Layouts? :)  -->
+            <div class="columns-8-4">
+                <div>
+                    <h2>Subheader</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aspernatur deserunt eligendi enim eveniet incidunt molestias nihil nisi officia, praesentium quisquam quo quod ratione rem repellat sequi tenetur voluptatibus!</p>
+                </div>
+                <div>
+                    <h2>Subheader</h2>
+                    <ul>
+                        <li>Text</li>
+                        <li>Text</li>
+                        <li>Text</li>
+                        <li>Text</li>
+                        <li>Text</li>
+                        <li>Text</li>
+                        <li>Text</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h2>Subheader</h2>
-                <ul>
-                    <li>Text</li>
-                    <li>Text</li>
-                    <li>Text</li>
-                    <li>Text</li>
-                    <li>Text</li>
-                    <li>Text</li>
-                    <li>Text</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="columns-6-6">
-            <div><h2>One-half 1</h2>
-                <img src="http://placehold.it/300x300" alt=""/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut corporis cumque dolores earum enim fuga laborum modi nostrum numquam optio perferendis provident quod tempora temporibus tenetur voluptatum. Iusto, porro?</p>
-            </div>
-            <div><h2>One-half 2</h2>
-                <img src="http://placehold.it/1000x500" alt=""/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut corporis cumque dolores earum enim fuga laborum modi nostrum numquam optio perferendis provident quod tempora temporibus tenetur voluptatum. Iusto, porro?</p>
+            <div class="columns-6-6">
+                <div>
+                    <h2>One-half 1</h2>
+                    <img src="http://placehold.it/300x300" alt=""/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut corporis cumque dolores earum enim fuga laborum modi nostrum numquam optio perferendis provident quod tempora temporibus tenetur voluptatum. Iusto, porro?</p>
+                </div>
+                <div>
+                    <h2>One-half 2</h2>
+                    <img src="http://placehold.it/1000x500" alt=""/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aut corporis cumque dolores earum enim fuga laborum modi nostrum numquam optio perferendis provident quod tempora temporibus tenetur voluptatum. Iusto, porro?</p>
+                </div>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="wrap">
-            <div class="widget"><h3>About</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
-            </div>
-            <div class="widget"><h3>Address</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
-            </div>
-            <div class="widget"><h3>Map</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
-            </div>
-            <div class="widget"><h3>Facebook</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
+        <div class="inner-wrap">
+            <!-- widgets should be grouped together into a widgets class -->
+            <div class="widgets">
+                <div class="widget"><h3>About</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
+                </div>
+                <div class="widget"><h3>Address</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
+                </div>
+                <div class="widget"><h3>Map</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
+                </div>
+                <div class="widget"><h3>Facebook</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti, dolore doloribus earum esse eum eveniet ex facilis, fugit incidunt nihil, omnis optio pariatur praesentium quaerat quod reprehenderit rerum temporibus!</p>
+                </div>
             </div>
         </div>
-        <div class="copyright">
-            &copy; Copyright
-        </div>
+
     </footer>
 
+    <!-- Copyright is moved out of footer because it has a different background on the actual page -->
+    <div class="copyright">
+        <div class="inner-wrap">
+            &copy; Copyright
+        </div>
+    </div>
 </div>
 
 

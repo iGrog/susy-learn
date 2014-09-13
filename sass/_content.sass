@@ -1,7 +1,6 @@
 
 
 .content
-
     padding: 30px 0
     h2
         font-size: 20px
@@ -9,28 +8,49 @@
         line-height: 34px
         color: #505050
 
-    .intro
-        +full
+    // There's no intro class in the html. I suspect this is supposed to
+    // be the .col12 class you gave in the html. No Susy style is required
+    // here because div blocks take up 100% width by default.
+    //
+    // Nothing related to Sass in the new few paragraphs, but just sayin' :)
+    //
+    // It is a design best practice to make sure your sentence measure
+    // (width) falls between 55 to 75 characters. Plus or Minus is okay.
+    //
+    // In this case, you lorem ipsum text spans the full 100% width and it
+    // can make it difficult for your readers to read.
 
-    +clearfix
+    // .intro
+        //
+        // +full
+
+    // This clearfix can actually be removed because clearfixes are added
+    // below at .columns-8-4 etc
+    // +clearfix
+
 
 
     img
         max-width: 100%
 
+    // Good stuff, just remove all the of 12s
     .columns-8-4
         +clearfix
 
         div:first-child
-            +span(8 of 12)
+            // +span(8 of 12)
+            +span(8)
 
         div:last-child
-            +span(4 of 12 last)
+            // +span(4 of 12 last)
+            // +span(4 last)
 
 
     .columns-6-6
         div:first-child
-            +span(6 of 12)
+            // +span(6 of 12)
+            +span(6)
 
         div:last-child
-            +span(6 of 12 last)
+            // +span(6 of 12 last)
+            +span(6 last)

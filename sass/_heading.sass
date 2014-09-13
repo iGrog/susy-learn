@@ -1,18 +1,32 @@
 .heading
+    // Correct, always add a clearfix if there are floated children
     +clearfix
     background-color: #f9f9f9
     color: #999
     min-height: $headingHeight
 
     .title
-        +span(6 of 12)
+        // Just a quick note: I personally would prefer
+        // keeping all Susy related stuff in a _layouts partial.
+
+        // Since columns is already set to 12, +span(6) effectively
+        // means +span(6 of 12), since it will fall back to the global
+        // context.
+        //
+        // If you use of 12 here, you're creating a local context only for
+        // this span, a practice that makes your code less DRY.
+        //
+        // +span(6 of 12)
+        +span(6)
         h1
             font-size: 20px
             line-height: $headingHeight
             color: #505050
 
     .breadcrumbs
-        +span (6 of 12 last)
+        // Same as above
+        // +span (6 of 12 last)
+        +span (6 last)
         text-align: right
         line-height: $headingHeight
 
