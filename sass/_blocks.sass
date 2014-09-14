@@ -29,16 +29,19 @@
 
 
 .featured-box
-    float: left
-    margin: 0 0 30px
+    margin: 0
+
+    +breakpoint(0px 900px)
+        margin-bottom: 15px
+
+    +clearfix
 
     h3
         font-size: 20px
         margin-bottom: 4px
 
     .featured-desc
-        float: left
-        margin: -65px 0 0 82px
+        margin-left: 75px
 
     &:hover > .circle
         background-color: $themeColor

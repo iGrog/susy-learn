@@ -4,6 +4,14 @@ nav
     // +span(10 of 12 last)
     float: right
 
+    +breakpoint(0px $smallScreen)
+        float: none
+        width: 100%
+        text-align: center
+
+        ul
+            float: none
+
     > ul
         float: right
         > li

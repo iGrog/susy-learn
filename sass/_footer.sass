@@ -17,18 +17,24 @@ footer
     // .widget
     //   +gallery(3)
 
-    .widget
-        // +span(3 of 12)
-        +span(3)
-        &:last-child
-            // +span(3 of 12 last)
-            +span(3 last)
+    .widgets
+        +clearfix
 
-        h3
-            font-size: 20px
-            line-height: 34px
-            color: white
-            font-weight: 500
+        .widget
+
+            +breakpoint(0px 700px)
+                +span(12)
+
+            +breakpoint(701px)
+                +span(3)
+                &:last-child
+                    +span(3 last)
+
+            h3
+                font-size: 20px
+                line-height: 34px
+                color: white
+                font-weight: 500
 
 .copyright
     background-color: #404040

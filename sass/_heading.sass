@@ -3,7 +3,13 @@
     +clearfix
     background-color: #f9f9f9
     color: #999
-    min-height: $headingHeight
+
+    +breakpoint(0px 700px)
+        min-height: auto
+        height: auto
+
+    +breakpoint(701px)
+        min-height: $headingHeight
 
     .title
         // Just a quick note: I personally would prefer
@@ -17,18 +23,32 @@
         // this span, a practice that makes your code less DRY.
         //
         // +span(6 of 12)
-        +span(6)
+
+        +breakpoint(0px 700px)
+            +span(12 last)
+            h1
+                line-height: 35px
+
+        +breakpoint(701px)
+            +span(6)
+
         h1
             font-size: 20px
             line-height: $headingHeight
             color: #505050
 
     .breadcrumbs
-        // Same as above
-        // +span (6 of 12 last)
-        +span (6 last)
-        text-align: right
-        line-height: $headingHeight
+
+        +breakpoint(0px 750px)
+            +span(12 last)
+            text-align: left
+            line-height: 35px
+
+        +breakpoint(751px)
+            +span (6 last)
+            text-align: right
+            line-height: $headingHeight
+
         font-size: 13px
 
         a
