@@ -1,0 +1,83 @@
+.circle, .circle i, .circle span
+    +transition-duration(0.5s)
+
+.circle
+    background-color: #f2f2f2
+    border-radius: 50%
+    display: block
+    float: left
+    height: 60px
+    text-align: center
+    width: 60px
+
+    i
+        font-size: 18px
+        margin: 20px 0
+        left: 37%
+        float: left
+        color: #a0a0a0
+        z-index: 5
+        position: relative
+
+    span
+        z-index: 4
+        display: block
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        background-color: #f2f2f2
+
+
+.featured-box
+    float: left
+    margin: 0 0 30px
+
+    h3
+        font-size: 20px
+        margin-bottom: 4px
+
+    .featured-desc
+        float: left
+        margin: -65px 0 0 82px
+
+    &:hover > .circle
+        background-color: $themeColor
+        i
+            color: #fff
+
+        span
+            background-color: $themeColor
+            opacity: 0
+            +transition-duration(0.7s)
+            +transform(scale(1.5))
+
+
+
+
+
+.notice-box
+    background: none repeat scroll 0 0 #f8f8f8
+    border-radius: 3px
+    box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.05) inset
+    margin: 0 0 20px
+    padding: 32px 28px
+    text-align: center
+    +transition(all 0.2s ease-in-out 0s)
+
+    h3
+        font-size: 20px
+        line-height: 26px
+        padding-bottom: 8px
+
+    i
+        display: block
+        font-size: 80px
+        height: 80px
+        margin: 10px 0
+
+    i, p, h3
+        +transition(all 0.2s ease-in-out 0s)
+
+    &:hover
+        background-color: $themeColor
+        color: white

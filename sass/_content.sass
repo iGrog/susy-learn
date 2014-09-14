@@ -1,12 +1,13 @@
 
 
 .content
-    padding: 30px 0
+    padding: 25px 0
     h2
         font-size: 20px
         font-weight: 500
         line-height: 34px
         color: #505050
+        padding-bottom: 15px
 
     // There's no intro class in the html. I suspect this is supposed to
     // be the .col12 class you gave in the html. No Susy style is required
@@ -28,10 +29,19 @@
     // below at .columns-8-4 etc
     // +clearfix
 
-
-
     img
         max-width: 100%
+        
+    .columns-12, .columns-8-4, .columns-6-6, .columns-4-4-4
+        padding-bottom: 30px
+
+    .columns-4-4-4
+        +clearfix
+        div
+            +span(4)
+
+        div:last-child
+            +last
 
     // Good stuff, just remove all the of 12s
     .columns-8-4
@@ -43,7 +53,7 @@
 
         div:last-child
             // +span(4 of 12 last)
-            // +span(4 last)
+            +span(4 last)
 
 
     .columns-6-6
