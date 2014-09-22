@@ -31,12 +31,14 @@
 
     img
         max-width: 100%
-        
+
     .columns-12, .columns-8-4, .columns-6-6, .columns-4-4-4
         +clearfix
+        // See _menu.sass
         +breakpoint(0px 900px)
             margin-bottom: 0
 
+        // See _menu.sass
         +breakpoint(901px)
             margin-bottom: 30px
 
@@ -46,8 +48,10 @@
     .columns-4-4-4
         +clearfix
 
+        // See _menu.sass
         +breakpoint(0px 900px)
             > div
+                // See _heading.sass
                 +span(12)
                 margin-bottom: 30px
 
@@ -55,6 +59,7 @@
                 +last
                 margin-bottom: 30px
 
+        // See _menu.sass
         +breakpoint(901px)
             > div
                 +span(4)
@@ -65,6 +70,7 @@
     // Good stuff, just remove all the of 12s
     .columns-8-4
 
+        // See _menu.sass
         +breakpoint(701px)
             > div:first-child
                 // +span(8 of 12)
@@ -74,8 +80,10 @@
                 // +span(4 of 12 last)
                 +span(4 last)
 
+        // See _menu.sass
         +breakpoint(0px 700px)
             > div
+                // See _heading.sass
                 +span(12)
                 margin-bottom: 30px
             > div:last-child
@@ -84,12 +92,15 @@
 
     .columns-6-6
 
+        // See _menu.sass
         +breakpoint(0px 800px)
             > div
+                // See _heading.sass
                 +span(12)
                 margin-bottom: 30px
 
 
+        // See _menu.sass
         +breakpoint(801px)
             > div
                 +span(6)

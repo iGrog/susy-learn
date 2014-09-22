@@ -4,6 +4,22 @@ nav
     // +span(10 of 12 last)
     float: right
 
+    // You don't have to add the breakpoint mixin when
+    // at the smallest breakpoint. As much as possible,
+    // you should only use the `min-width` breakpoint
+    // argument.
+    //
+    // Here's how it might look:
+    //
+    // .selector
+    //      // Styles for small screens here
+    //
+    //      // +breakpoint($midscreen)
+    //        // Styles for mid screens here
+    //
+    //      // +breakpoint($largescreen)
+    //        // Styles for large screens here
+    //
     +breakpoint(0px $smallScreen)
         float: none
         width: 100%
@@ -63,6 +79,7 @@ nav
             // of this area, otherwise dropdowns can look super ugly
             ul
                 z-index: 888
+                // This min-width is the culprit for the horizontal scrollbar
                 min-width: 150px
                 width: 100%
                 visibility: hidden

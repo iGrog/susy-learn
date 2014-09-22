@@ -4,10 +4,13 @@
     background-color: #f9f9f9
     color: #999
 
+    // Look at breakpoint explanation under _menu
     +breakpoint(0px 700px)
+        // No need to put auto, because its the default.
         min-height: auto
         height: auto
 
+    // Look at breakpoint explanation under _menu
     +breakpoint(701px)
         min-height: $headingHeight
 
@@ -25,7 +28,9 @@
         // +span(6 of 12)
 
         +breakpoint(0px 700px)
-            +span(12 last)
+            // If its the full width, no need for the span mixin.
+            // Every div is `00% width by default
+            / +span(12 last)
             h1
                 line-height: 35px
 
@@ -38,12 +43,14 @@
             color: #505050
 
     .breadcrumbs
-
+        // see _menu for breakpoints
         +breakpoint(0px 750px)
+            // see above
             +span(12 last)
             text-align: left
             line-height: 35px
 
+        // see _menu for breakpoints
         +breakpoint(751px)
             +span (6 last)
             text-align: right
